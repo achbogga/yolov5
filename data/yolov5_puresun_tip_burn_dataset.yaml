@@ -1,0 +1,7 @@
+names:
+- bk
+- tip_burn
+nc: 2
+path: /home/aboggaram/data/PURESUN_MASTER/yolov5_data
+train: images/train
+val: images/test
