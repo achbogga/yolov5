@@ -1,0 +1,4 @@
+[core]
+    remote = gcp_iunu_boggaram
+['remote "gcp_iunu_boggaram"']
+    url = gs://iunu_aboggaram
