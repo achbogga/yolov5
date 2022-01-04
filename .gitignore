@@ -27,6 +27,7 @@ storage.googleapis.com
 runs/*
 data/*
 data/images/*
+!data/PURESUN_MASTER
 !data/*.yaml
 !data/hyps
 !data/scripts
