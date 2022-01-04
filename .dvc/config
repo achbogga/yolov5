@@ -1,4 +1,5 @@
 [core]
     remote = gcp_iunu_boggaram
+    autostage = true
 ['remote "gcp_iunu_boggaram"']
     url = gs://iunu_aboggaram
