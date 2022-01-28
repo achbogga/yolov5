@@ -11,7 +11,7 @@ Usage - formats:
                                       yolov5s.onnx               # ONNX Runtime or OpenCV DNN with --dnn
                                       yolov5s.xml                # OpenVINO
                                       yolov5s.engine             # TensorRT
-                                      yolov5s.mlmodel            # CoreML (under development)
+                                      yolov5s.mlmodel            # CoreML (MacOS-only)
                                       yolov5s_saved_model        # TensorFlow SavedModel
                                       yolov5s.pb                 # TensorFlow GraphDef
                                       yolov5s.tflite             # TensorFlow Lite
@@ -137,9 +137,9 @@ def run(data,
 
         # Load model
         model = DetectMultiBackend(weights, device=device, dnn=dnn, data=data)
-        stride, pt, jit, engine = model.stride, model.pt, model.jit, model.engine
+        stride, pt, jit, onnx, engine = model.stride, model.pt, model.jit, model.onnx, model.engine
         imgsz = check_img_size(imgsz, s=stride)  # check image size
-        half &= (pt or jit or engine) and device.type != 'cpu'  # half precision only supported by PyTorch on CUDA
+        half &= (pt or jit or onnx or engine) and device.type != 'cpu'  # FP16 supported on limited backends with CUDA
         if pt or jit:
             model.model.half() if half else model.model.float()
         elif engine:
