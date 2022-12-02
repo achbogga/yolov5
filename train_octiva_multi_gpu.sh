@@ -12,7 +12,7 @@ time python3 -m torch.distributed.run \
     --data "${dataset_config}" \
     --img "${image_size}" \
     --weights "${finetune_weights}" \
-    --project "/home/aboggaram/models/octiva_yolov5_instance_segmentation_${today}"
+    --project "/home/aboggaram/models/octiva_yolov5_instance_segmentation_${today}" \
     --name "train_image_size_${image_size}_" \
 	 | tee "/home/aboggaram/logs/octiva_yolov5_${image_size}_instance_segmentation_${today}.log"
 
