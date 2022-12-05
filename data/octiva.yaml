@@ -6,4 +6,7 @@ val: /home/aboggaram/data/Octiva/yolov7_instance_segmentation_format_Dec_2_2022/
 nc: 3
 
 # class names
-names: [ 'Main_stems', 'Peduncles', 'Petioles' ]
+names:
+  0: 'Peduncles'
+  1: 'Main_stems'
+  2: 'Petioles'

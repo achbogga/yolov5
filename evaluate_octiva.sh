@@ -1,5 +1,5 @@
 #!/bin/bash
-finetune_weights="/home/aboggaram/models/octiva_yolov5_instance_segmentation_2022-11-22/exp/weights/best.pt"
+finetune_weights="/home/aboggaram/models/octiva_yolov5_instance_segmentation_2022-12-02/train_image_size_640_/weights/best.pt"
 dataset_config="/home/aboggaram/projects/yolov7_instance_segmentation/seg/data/octiva_old.yaml"
 today=$(date +"%Y-%m-%d")
 time python3 \
