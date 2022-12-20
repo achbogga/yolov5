@@ -10,8 +10,8 @@ time python3 -m torch.distributed.run \
     --device 0,1 \
     --epochs 500 \
     --hyp "${hyperparameter_config}" \
-    --optimizer "AdamW" \
-    --batch-size 8 \
+    --optimizer "SGD" \
+    --batch-size 4 \
     --multi-scale \
     --data "${dataset_config}" \
     --img "${image_size}" \
